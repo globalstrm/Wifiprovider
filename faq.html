@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Wifi Provider In Your Area | Frequently Asked Questions</title>
+    <meta name="description" content="Find answers to common questions about Wifi Provider In Your Area's independent internet and cable support services.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .accordion-item {
+            background-color: rgba(20, 20, 20, 0.8);
+            border: 1px solid rgba(255, 106, 0, 0.2);
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-item:hover {
+            border-color: var(--color-orange);
+        }
+
+        .accordion-item.active {
+            border-color: var(--color-orange);
+            box-shadow: 0 10px 30px rgba(255, 106, 0, 0.2);
+        }
+
+        .accordion-header {
+            padding: 1.75rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            background-color: rgba(255, 106, 0, 0.05);
+        }
+
+        .accordion-question {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--color-white);
+            margin: 0;
+        }
+
+        .accordion-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--color-orange), var(--color-red));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .accordion-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .accordion-content {
+            padding: 0 2rem 2rem 2rem;
+            color: var(--color-grey);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .accordion-content p {
+            margin-bottom: 1rem;
+        }
+
+        .accordion-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .category-card {
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(20, 20, 20, 0.8), rgba(11, 11, 11, 0.8));
+            border-left: 4px solid var(--color-orange);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateX(10px);
+            border-left-color: var(--color-red);
+        }
+
+        .category-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--color-white);
+        }
+
+        .category-count {
+            font-size: 0.9rem;
+            color: var(--color-grey);
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Call Button -->
+    <div class="sticky-call-btn">
+        <button class="call-icon-btn" onclick="openCallModal()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>CALL NOW</span>
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.svg" alt="Wifi Provider In Your Area Logo" style="height: 40px; width: auto;">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+                <li><a href="faq.html" class="nav-link active">FAQ</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-cta" onclick="openCallModal()">Get Support</button>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero-section" style="min-height: 60vh;">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-headline">
+                    <span class="headline-line">Frequently Asked</span>
+                    <span class="headline-line">Questions</span>
+                </h1>
+                <p class="hero-subtext">Find quick answers to common questions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="assistance-section">
+        <div class="assistance-container">
+            <h2 class="section-heading">General Questions</h2>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3 class="accordion-question">Are you an official cable or internet service provider?</h3>
+                    <div class="accordion-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p><strong>No.</strong> Wifi Provider In Your Area is an independent third-party assistance platform launched in 2026. We are not an ISP, cable company, or telecommunication service provider.</p>
+                        <p>We provide informational guidance and support assistance only. We do not provide internet or cable services directly, and we are not affiliated with, authorized by, or endorsed by any service provider.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3 class="accordion-question">Do you sell internet, cable, or streaming plans?</h3>
+                    <div class="accordion-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p><strong>No.</strong> We do not sell internet, cable, streaming subscriptions, or any service plans. Our role is strictly limited to providing guidance and informational assistance related to connectivity issues.</p>
+                        <p>If you need to purchase or modify a service plan, you must contact your service provider directly.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3 class="accordion-question">Do you charge for your services?</h3>
+                    <div class="accordion-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p><strong>Yes.</strong> Our service fees are separate from any provider charges you may have. We charge for the technical guidance and assistance we provide.</p>
+                        <p>The cost will be explained before any service begins. You will still be responsible for your regular provider billing—our fees do not include or replace those charges.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3 class="accordion-question">Will I still be billed by my service provider?</h3>
+                    <div class="accordion-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p><strong>Yes.</strong> Provider billing remains completely unchanged. We do not interact with, modify, or process any payments to your internet, cable, or streaming service provider.</p>
+                        <p>Our assistance fees are separate and in addition to your existing provider charges.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3 class="accordion-question">Do you need my account passwords or sensitive information?</h3>
+                    <div class="accordion-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p><strong>No.</strong> We never request provider passwords, account credentials, billing information, or other sensitive data.</p>
+                        <p>Our guidance is limited to helping you troubleshoot connectivity issues using your own equipment. We do not access your provider accounts.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3 class="accordion-question">Which providers do you support?</h3>
+                    <div class="accordion-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>We may reference multiple providers for guidance purposes only. However, we have <strong>no affiliation, partnership, authorization, or endorsement</strong> from any provider.</p>
+                        <p>All provider names are used strictly for informational purposes. All trademarks belong to their respective owners.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3 class="accordion-question">Are your services refundable?</h3>
+                    <div class="accordion-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p><strong>Yes.</strong> Refund requests can be submitted within 7 to 15 days of service purchase, depending on the type of assistance provided and whether assistance has already been delivered.</p>
+                        <p>Please review our Refund Policy page for full eligibility details and terms.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3 class="accordion-question">What is Wifi Provider In Your Area?</h3>
+                    <div class="accordion-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>Wifi Provider In Your Area is an independent third-party support service that helps individuals and businesses troubleshoot and resolve internet and cable connectivity issues. We are NOT an internet service provider or cable company—we're a support service that provides guidance and technical assistance.</p>
+                        <p>Our team of specialists helps you understand technical problems, walk through troubleshooting steps, and provide clear explanations in plain English.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3 class="accordion-question">Are you affiliated with my internet or cable provider?</h3>
+                    <div class="accordion-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p><strong>No.</strong> Wifi Provider In Your Area is completely independent and not affiliated with, authorized by, endorsed by, or sponsored by any internet service provider, cable company, or telecommunications provider. We do not represent any specific ISP or cable company.</p>
+                        <p>Our independence allows us to provide unbiased guidance without corporate agendas or upselling tactics.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3 class="accordion-question">What services do you provide?</h3>
+                    <div class="accordion-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>We provide technical support guidance for:</p>
+                        <p>• Internet connectivity issues and outages<br>
+                        • WiFi problems and optimization<br>
+                        • Router and modem troubleshooting<br>
+                        • Network setup and configuration<br>
+                        • Cable TV issues and equipment problems<br>
+                        • Speed testing and performance optimization</p>
+                        <p>We guide you through troubleshooting steps and help you understand what's happening with your connection.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3 class="accordion-question">What DON'T you do?</h3>
+                    <div class="accordion-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>We do NOT:</p>
+                        <p>• Provide internet or cable service<br>
+                        • Access your ISP account or billing information<br>
+                        • Guarantee service restoration (only your ISP can restore service)<br>
+                        • Represent or act on behalf of any ISP or cable company<br>
+                        • Install physical equipment at your location<br>
+                        • Process payments to your service provider</p>
+                        <p>Our role is strictly limited to providing technical support guidance and assistance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3 class="accordion-question">How quickly can I get help?</h3>
+                    <div class="accordion-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>We pride ourselves on fast response times. When you call our support line, you'll typically be connected with a live support specialist in under 2 minutes—no long hold times or complicated phone trees.</p>
+                        <p>Our service is available 24/7, so you can get help whenever you need it, even outside traditional business hours.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-heading" style="margin-top: 4rem;">Pricing & Payment</h2>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3 class="accordion-question">How much does your service cost?</h3>
+                    <div class="accordion-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>Our pricing is transparent and based on the complexity and duration of the support you need. You'll be informed of the cost before any service begins—no hidden fees or surprise charges.</p>
+                        <p>For specific pricing information, please call our support line where a specialist can provide accurate pricing based on your needs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3 class="accordion-question">Do you charge my ISP or cable company?</h3>
+                    <div class="accordion-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>No. We are completely independent from ISPs and cable companies. Any charges for our services are separate from your regular internet or cable bill. Your service provider will not be charged or billed for our assistance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3 class="accordion-question">What is your refund policy?</h3>
+                    <div class="accordion-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>We stand behind our service. If you're not satisfied with the support you received, please contact us immediately. Our refund policy details are available on our Refund Policy page.</p>
+                        <p>Note: We cannot guarantee specific outcomes (like service restoration) since that depends on your ISP and factors beyond our control.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-heading" style="margin-top: 4rem;">Technical Questions</h2>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3 class="accordion-question">Can you fix my internet if it's completely down?</h3>
+                    <div class="accordion-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>We can help you troubleshoot and identify the cause of the outage. In many cases, connectivity issues can be resolved through proper troubleshooting of your equipment (modem, router, cables, etc.).</p>
+                        <p>However, if the issue is with your ISP's network or infrastructure (like a service outage in your area), only your ISP can restore service. We'll help you determine the cause and guide you on the appropriate next steps.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3 class="accordion-question">Do I need to be tech-savvy to use your service?</h3>
+                    <div class="accordion-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>Not at all! Our support specialists excel at explaining technical concepts in plain, easy-to-understand language. We'll guide you step-by-step through any troubleshooting process, regardless of your technical knowledge level.</p>
+                        <p>Just be able to describe what's happening with your connection, and we'll take it from there.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3 class="accordion-question">Can you help with business internet issues?</h3>
+                    <div class="accordion-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>Yes! We support both residential and business connectivity issues. Whether you're a remote worker, small business owner, or managing a home office, we can help troubleshoot internet and connectivity problems.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3 class="accordion-question">What if the problem isn't fixed after I call?</h3>
+                    <div class="accordion-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>If the issue persists after following our troubleshooting guidance, you can call back for additional support. Some issues may require intervention from your ISP, and we'll help you understand when that's necessary and what information to provide them.</p>
+                        <p>Remember, we provide guidance and support—we cannot guarantee specific outcomes since some issues are beyond our control (like ISP network outages or faulty equipment that needs replacement).</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-heading" style="margin-top: 4rem;">Privacy & Security</h2>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3 class="accordion-question">Will you access my personal information?</h3>
+                    <div class="accordion-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>No. We do not access your ISP account, billing information, browsing history, or personal data. Our support is limited to helping you troubleshoot connectivity issues on your own equipment.</p>
+                        <p>We only collect basic contact information necessary to provide support, and we protect all customer data according to our Privacy Policy.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3 class="accordion-question">Is it safe to follow your technical guidance?</h3>
+                    <div class="accordion-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>Yes. Our specialists provide standard, safe troubleshooting guidance that doesn't harm your equipment. All recommendations follow industry best practices.</p>
+                        <p>We'll never ask you to perform any action that could compromise your security, damage your equipment, or violate your service agreement with your ISP.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Still Have Questions Section -->
+    <section class="conversion-section">
+        <div class="conversion-container">
+            <div class="conversion-content">
+                <h2 class="conversion-heading">Still Have Questions?</h2>
+                <p class="conversion-subtext">Talk to a real person who can answer your specific concerns.</p>
+                <button class="conversion-cta pulse-animation" onclick="openCallModal()">
+                    <span class="cta-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </span>
+                    <span class="cta-text">CALL NOW FOR SUPPORT</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="logo.svg" alt="Wifi Provider In Your Area Logo" style="height: 50px; width: auto; margin-bottom: 1rem;">
+                    <p class="footer-description">Independent support for your internet and cable connectivity issues. Real people, real solutions.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Get Support</h4>
+                    <button class="footer-cta" onclick="openCallModal()">Call Now</button>
+                    <p class="footer-hours">Available 24/7</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-compliance"><strong>⚠️ INDEPENDENT SERVICE DISCLOSURE:</strong> Wifi Provider In Your Area is an independent third-party service assistance startup, launched in 2026. We are not affiliated with, authorized by, endorsed by, or sponsored by any cable, internet, or streaming service provider. We provide informational guidance only and charge separate service fees. All provider names, if mentioned, are used strictly for informational purposes. All trademarks belong to their respective owners.</p>
+                <p class="footer-copyright">© 2026 Wifi Provider In Your Area. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Call Modal -->
+    <div id="callModal" class="modal">
+        <div class="modal-overlay" onclick="closeCallModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeCallModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </div>
+                <h3 class="modal-title">Get Support Now</h3>
+                <p class="modal-subtitle">Call to speak with a support specialist</p>
+            </div>
+            <div class="modal-body">
+                <a href="tel:+18005551234" class="modal-phone">1-800-555-1234</a>
+                <p class="modal-info">Available 24/7 • Average wait time: Under 2 minutes</p>
+                <div class="modal-features">
+                    <div class="feature-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>No automated menus</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Real support agents</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Fast resolution guidance</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <p class="modal-disclaimer">Independent third-party assistance • Not affiliated with ISPs</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Bottom Sticky Call Bar -->
+    <div class="mobile-call-bar">
+        <button class="mobile-call-btn" onclick="openCallModal()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>TAP TO CALL NOW</span>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

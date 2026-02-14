@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wifi Provider In Your Area - Independent Internet & Cable Service Assistance</title>
+    <meta name="description" content="Get general guidance and informational support for internet, broadband, Wi-Fi, and cable TV issues from an independent third-party assistance provider launched in 2026.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sticky Call Button (Right Side) -->
+    <div class="sticky-call-btn">
+        <button class="call-icon-btn" onclick="openCallModal()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>CALL NOW</span>
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="nav-logo">
+                    <img src="logo.svg" alt="Wifi Provider In Your Area Logo" style="height: 40px; width: auto;">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div class="nav-contact">
+                    <span class="nav-phone">1-800-555-1234</span>
+                    <span class="nav-hours">24/7 Available</span>
+                </div>
+                <button class="nav-cta" onclick="openCallModal()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    Get Support
+                </button>
+            </div>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Editorial Style -->
+    <section class="hero-section">
+        <div class="hero-bg-image"></div>
+        <div class="hero-container">
+            <div class="hero-grid">
+                <div class="hero-left">
+                    <div class="hero-badge">24/7 SUPPORT</div>
+                    <h1 class="hero-headline">
+                        <span class="headline-line">Internet or Cable</span>
+                        <span class="headline-line">Not Working?</span>
+                    </h1>
+                    <p class="hero-subtext">Get general guidance and informational support related to internet, broadband, Wi-Fi, and cable TV services. We help you understand service options and navigate common connectivity concerns.</p>
+                    <div class="hero-cta-group">
+                        <button class="hero-cta primary" onclick="openCallModal()">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            CALL SUPPORT NOW
+                        </button>
+                        <a href="#how-it-works" class="hero-cta secondary">Learn How We Assist</a>
+                    </div>
+                    <div class="hero-trust-line">
+                        <div class="trust-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>No automated menus</span>
+                        </div>
+                        <div class="trust-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Real support agents</span>
+                        </div>
+                        <div class="trust-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Under 2 min response</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80" alt="Support specialist helping customer" class="hero-image" loading="eager">
+                        <div class="hero-stat-card card-1">
+                            <div class="stat-value">24/7</div>
+                            <div class="stat-label">Available</div>
+                        </div>
+                        <div class="hero-stat-card card-2">
+                            <div class="stat-value">&lt;2 min</div>
+                            <div class="stat-label">Response Time</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-compliance">
+                <p><strong>⚠️ IMPORTANT DISCLOSURE:</strong> Wifi Provider In Your Area is an independent third-party service assistance startup, launched in 2026, and is not affiliated with, endorsed by, or sponsored by any cable, internet, or streaming service provider. We provide informational guidance only and charge separate service fees.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diagonal Scrolling Text Band -->
+    <section class="scrolling-band-section">
+        <div class="scrolling-band">
+            <div class="scrolling-text">
+                <span>FAST SUPPORT • REAL AGENTS • NO CONFUSION • INTERNET HELP • CABLE ASSISTANCE • WIFI TROUBLESHOOTING • ROUTER SETUP • 24/7 AVAILABLE • FAST SUPPORT • REAL AGENTS • NO CONFUSION • INTERNET HELP • CABLE ASSISTANCE • WIFI TROUBLESHOOTING • ROUTER SETUP • 24/7 AVAILABLE •</span>
+                <span>FAST SUPPORT • REAL AGENTS • NO CONFUSION • INTERNET HELP • CABLE ASSISTANCE • WIFI TROUBLESHOOTING • ROUTER SETUP • 24/7 AVAILABLE • FAST SUPPORT • REAL AGENTS • NO CONFUSION • INTERNET HELP • CABLE ASSISTANCE • WIFI TROUBLESHOOTING • ROUTER SETUP • 24/7 AVAILABLE •</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statement Block Section -->
+    <section class="statement-section">
+        <div class="statement-container">
+            <div class="statement-left">
+                <h2 class="statement-main-heading">Why Choose Us?</h2>
+                <p class="statement-intro">Receive unbiased guidance without corporate agendas or pressure tactics.</p>
+            </div>
+            <div class="statement-right">
+                <div class="statement-item">
+                    <div class="statement-number">01</div>
+                    <div class="statement-content">
+                        <h3 class="statement-title">Fast guidance.</h3>
+                        <p class="statement-text">Get immediate help without navigating complex phone menus or waiting on hold.</p>
+                    </div>
+                </div>
+                <div class="statement-item">
+                    <div class="statement-number">02</div>
+                    <div class="statement-content">
+                        <h3 class="statement-title">Clear support.</h3>
+                        <p class="statement-text">We explain technical issues in plain English, so you understand what's happening.</p>
+                    </div>
+                </div>
+                <div class="statement-item">
+                    <div class="statement-number">03</div>
+                    <div class="statement-content">
+                        <h3 class="statement-title">Real people.</h3>
+                        <p class="statement-text">Talk to actual humans who care about solving your connectivity problems.</p>
+                    </div>
+                </div>
+                <div class="statement-item">
+                    <div class="statement-number">04</div>
+                    <div class="statement-content">
+                        <h3 class="statement-title highlight">No confusion.</h3>
+                        <p class="statement-text">Straightforward advice with no hidden agendas or pressure to buy anything.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="who-we-are-section">
+        <div class="who-container">
+            <div class="who-left">
+                <h2 class="who-title">
+                    <span class="title-line">What We</span>
+                    <span class="title-line">Do</span>
+                </h2>
+            </div>
+            <div class="who-right">
+                <div class="who-content">
+                    <p class="who-description">At Wifi Provider In Your Area, we help users:</p>
+                    <p class="who-description">• Understand internet and broadband service options<br>• Get practical guidance on common connectivity issues<br>• Learn how to navigate service provider processes<br>• Receive general informational support related to cable TV services</p>
+                    <p class="who-description" style="color: var(--color-orange); font-weight: 600; margin-top: 1.5rem;">Our role is limited to independent guidance and assistance only. We do not provide internet or cable services directly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image + Content Split Section -->
+    <section class="image-content-section">
+        <div class="image-content-container">
+            <div class="image-content-left">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Customer support specialist" class="section-image" loading="lazy">
+            </div>
+            <div class="image-content-right">
+                <div class="content-badge">OUR APPROACH</div>
+                <h2 class="content-heading">
+                    <span class="heading-line">Support That</span>
+                    <span class="heading-line">Actually Makes Sense</span>
+                </h2>
+                <p class="content-text">We know dealing with connectivity issues is frustrating. That's why we cut through the technical jargon and give you clear, actionable guidance.</p>
+                <p class="content-text">Our specialists take time to understand your specific situation, explain what's happening in plain English, and walk you through solutions step-by-step.</p>
+                <div class="content-features">
+                    <div class="feature-point">
+                        <div class="feature-icon-small">✓</div>
+                        <span>No hold music or automated menus</span>
+                    </div>
+                    <div class="feature-point">
+                        <div class="feature-icon-small">✓</div>
+                        <span>Honest assessment of your issue</span>
+                    </div>
+                    <div class="feature-point">
+                        <div class="feature-icon-small">✓</div>
+                        <span>Clear next steps, every time</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Assist With - Asymmetric Cards -->
+    <section class="assistance-section">
+        <div class="assistance-container">
+            <h2 class="section-heading">What We Assist With</h2>
+            <div class="assistance-grid">
+                <div class="assistance-card card-1">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 16v-4"></path>
+                            <path d="M12 8h.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Internet Outages</h3>
+                    <p class="card-description">Connection dropped? We'll help you troubleshoot and identify if it's a local issue or provider-wide problem.</p>
+                </div>
+
+                <div class="assistance-card card-2">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                            <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                            <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                            <circle cx="12" cy="20" r="1"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">WiFi Issues</h3>
+                    <p class="card-description">Slow speeds, weak signal, or can't connect? Get step-by-step guidance to optimize your wireless network.</p>
+                </div>
+
+                <div class="assistance-card card-3">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                            <path d="M16 3l-4 4-4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Setup Guidance</h3>
+                    <p class="card-description">New service or equipment? We'll walk you through the setup process without technical confusion.</p>
+                </div>
+
+                <div class="assistance-card card-4">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="8" rx="2"></rect>
+                            <path d="M6 10v6"></path>
+                            <path d="M10 10v6"></path>
+                            <path d="M14 10v6"></path>
+                            <path d="M18 10v6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Router Help</h3>
+                    <p class="card-description">Router lights blinking weird? Configuration issues? Get clear answers on what's happening and how to fix it.</p>
+                </div>
+
+                <div class="assistance-card card-5">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="7" width="20" height="15" rx="2"></rect>
+                            <polyline points="17 2 12 7 7 2"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Cable TV Assistance</h3>
+                    <p class="card-description">Missing channels, pixelated picture, or equipment errors? We'll help you understand and resolve cable issues.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Width Image Banner with Overlay Text -->
+    <section class="image-banner-section">
+        <div class="image-banner-container">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=80" alt="Network technology" class="banner-image" loading="lazy">
+            <div class="banner-overlay">
+                <div class="banner-content">
+                    <h2 class="banner-heading">Technology Doesn't Have to Be Complicated</h2>
+                    <p class="banner-subtext">We translate tech-speak into human-speak</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do NOT Do - Compliance Wall -->
+    <section class="compliance-section">
+        <div class="compliance-container">
+            <div class="compliance-content">
+                <h2 class="compliance-heading">What We Do NOT Do</h2>
+                <p style="font-size: 1.1rem; color: var(--color-white); margin-bottom: 2rem; text-align: center;">To avoid confusion, please note:</p>
+                <div class="compliance-grid">
+                    <div class="compliance-item">
+                        <span class="compliance-icon">✗</span>
+                        <p>We are NOT an Internet Service Provider (ISP)</p>
+                    </div>
+                    <div class="compliance-item">
+                        <span class="compliance-icon">✗</span>
+                        <p>We do NOT provide official customer support for any brand</p>
+                    </div>
+                    <div class="compliance-item">
+                        <span class="compliance-icon">✗</span>
+                        <p>We are NOT affiliated, authorized, or endorsed by any telecom or cable company</p>
+                    </div>
+                    <div class="compliance-item">
+                        <span class="compliance-icon">✗</span>
+                        <p>We do NOT sell internet or cable subscriptions</p>
+                    </div>
+                    <div class="compliance-item">
+                        <span class="compliance-icon">✗</span>
+                        <p>We do NOT provide guaranteed technical fixes</p>
+                    </div>
+                    <div class="compliance-item">
+                        <span class="compliance-icon">✗</span>
+                        <p>We do NOT access your account passwords or sensitive information</p>
+                    </div>
+                </div>
+                <p class="compliance-disclaimer">Wifi Provider In Your Area is an independent third-party service assistance provider launched in 2026. We are not affiliated with, authorized by, or endorsed by any internet, cable, or telecom service provider. All provider names, if mentioned, are used strictly for informational purposes only. All trademarks belong to their respective owners.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reverse Image + Content Section -->
+    <section class="image-content-section reverse">
+        <div class="image-content-container">
+            <div class="image-content-left">
+                <div class="content-badge">WHAT TO EXPECT</div>
+                <h2 class="content-heading">
+                    <span class="heading-line">Simple Process,</span>
+                    <span class="heading-line">Fast Results</span>
+                </h2>
+                <p class="content-text">Most connectivity issues fall into common patterns. Our team has seen thousands of cases and can quickly identify what's likely causing your problem.</p>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Tell us what's wrong</h4>
+                            <p>Describe your issue in your own words</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>We diagnose the issue</h4>
+                            <p>Quick assessment of likely causes</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Get guided solutions</h4>
+                            <p>Step-by-step help to resolve it</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-content-right">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80" alt="Technical support" class="section-image" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Independent Help Matters - Diagonal Flow -->
+    <section class="why-section">
+        <div class="why-container">
+            <h2 class="section-heading">Why Independent Help Matters</h2>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-number">01</div>
+                    <h3 class="why-title">No Bias</h3>
+                    <p class="why-description">We're not trying to upsell you packages or lock you into contracts. Our only job is to help you understand your technical issues.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-number">02</div>
+                    <h3 class="why-title">Clear Communication</h3>
+                    <p class="why-description">We translate technical jargon into plain English. No confusing terms, no hidden agenda—just straightforward guidance.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-number">03</div>
+                    <h3 class="why-title">Faster Resolution</h3>
+                    <p class="why-description">Skip the automated menus and long hold times. Talk to a real person who can quickly assess your situation.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-number">04</div>
+                    <h3 class="why-title">Educational Approach</h3>
+                    <p class="why-description">We don't just fix the problem—we help you understand what went wrong so you're better prepared next time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three Column Image Grid Section -->
+    <section class="image-grid-section">
+        <div class="image-grid-container">
+            <h2 class="section-heading centered">Common Issues We Help Solve</h2>
+            <div class="image-grid">
+                <div class="grid-item">
+                    <div class="grid-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=600&q=80" alt="Router setup" class="grid-image" loading="lazy">
+                        <div class="grid-overlay">
+                            <h3 class="grid-title">Router Problems</h3>
+                        </div>
+                    </div>
+                    <p class="grid-description">Blinking lights, no connection, or slow speeds? We'll help you troubleshoot router issues quickly.</p>
+                </div>
+                <div class="grid-item">
+                    <div class="grid-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80" alt="Internet connectivity" class="grid-image" loading="lazy">
+                        <div class="grid-overlay">
+                            <h3 class="grid-title">Connection Drops</h3>
+                        </div>
+                    </div>
+                    <p class="grid-description">Internet cutting in and out? We'll identify whether it's hardware, software, or provider-related.</p>
+                </div>
+                <div class="grid-item">
+                    <div class="grid-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="WiFi optimization" class="grid-image" loading="lazy">
+                        <div class="grid-overlay">
+                            <h3 class="grid-title">WiFi Coverage</h3>
+                        </div>
+                    </div>
+                    <p class="grid-description">Dead zones or weak signal? Get guidance on optimizing your wireless network coverage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call Conversion Section -->
+    <section class="conversion-section">
+        <div class="conversion-bg-image"></div>
+        <div class="conversion-overlay"></div>
+        <div class="conversion-container">
+            <div class="conversion-content">
+                <h2 class="conversion-heading">Need Help Right Now?</h2>
+                <p class="conversion-subtext">Talk to a support specialist for general guidance on your internet or cable concerns.</p>
+                <button class="conversion-cta pulse-animation" onclick="openCallModal()">
+                    <span class="cta-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </span>
+                    <span class="cta-text">CALL NOW FOR SUPPORT</span>
+                </button>
+                <p class="conversion-note">Available 24/7 • Average response time: Under 2 minutes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">
+                        <img src="logo.svg" alt="Wifi Provider In Your Area Logo" style="height: 50px; width: auto; margin-bottom: 1rem;">
+                    </h3>
+                    <p class="footer-tagline">Independent support for your connectivity issues</p>
+                    <p class="footer-description">We're not your ISP. We're independent specialists who help you troubleshoot, understand, and resolve internet and cable problems—without the jargon or runaround.</p>
+                </div>
+                <div class="footer-links-grid">
+                    <div class="footer-links-col">
+                        <h4 class="footer-title">Navigation</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="how-it-works.html">How It Works</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4 class="footer-title">Legal</h4>
+                        <ul class="footer-links">
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms & Conditions</a></li>
+                            <li><a href="refund.html">Refund Policy</a></li>
+                            <li><a href="disclaimer.html">Disclaimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-cta-section">
+                <div class="footer-cta-card">
+                    <h4 class="footer-cta-heading">Need Help Right Now?</h4>
+                    <p class="footer-cta-text">Talk to a real support specialist</p>
+                    <button class="footer-cta-btn" onclick="openCallModal()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        Call 1-800-555-1234
+                    </button>
+                    <div class="footer-cta-features">
+                        <div class="footer-feature">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>24/7 Availability</span>
+                        </div>
+                        <div class="footer-feature">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Under 2 min response</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p class="footer-compliance"><strong>⚠️ INDEPENDENT SERVICE DISCLOSURE:</strong> Wifi Provider In Your Area is an independent third-party service assistance startup, launched in 2026. We are not affiliated with, authorized by, endorsed by, or sponsored by any cable, internet, or streaming service provider. We provide informational guidance only and charge separate service fees. All provider names, if mentioned, are used strictly for informational purposes. All trademarks belong to their respective owners.</p>
+                <p class="footer-copyright">© 2026 Wifi Provider In Your Area. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Call Modal -->
+    <div id="callModal" class="modal">
+        <div class="modal-overlay" onclick="closeCallModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeCallModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </div>
+                <h3 class="modal-title">Get Support Now</h3>
+                <p class="modal-subtitle">Call to speak with a support specialist</p>
+            </div>
+            <div class="modal-body">
+                <a href="tel:+18005551234" class="modal-phone">1-800-555-1234</a>
+                <p class="modal-info">Available 24/7 • Average wait time: Under 2 minutes</p>
+                <div class="modal-features">
+                    <div class="feature-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>No automated menus</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Real support agents</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Fast resolution guidance</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <p class="modal-disclaimer">Independent third-party assistance • Not affiliated with ISPs</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auto Popup (appears after 5 seconds) -->
+    <div id="autoPopup" class="auto-popup">
+        <div class="auto-popup-overlay" onclick="closeAutoPopup()"></div>
+        <div class="auto-popup-content">
+            <button class="auto-popup-close" onclick="closeAutoPopup()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <h3 class="auto-popup-headline">Internet or Cable Not Working?</h3>
+            <p class="auto-popup-subtext">Get instant help for slow internet, outages, setup issues, or cable problems.</p>
+            <a href="tel:+18005551234" class="auto-popup-cta">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                CALL SUPPORT NOW
+            </a>
+            <div class="auto-popup-phone">1-800-555-1234</div>
+            <p class="auto-popup-trust">Quick assistance • No forms • Talk to a real agent</p>
+        </div>
+    </div>
+
+    <!-- Mobile Bottom Sticky Call Bar -->
+    <div class="mobile-call-bar">
+        <button class="mobile-call-btn" onclick="openCallModal()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>TAP TO CALL NOW</span>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

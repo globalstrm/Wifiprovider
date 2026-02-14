@@ -1,0 +1,17 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="6" fill="#FF6A00"/>
+  <g transform="translate(16, 16)">
+    <!-- WiFi signal arcs -->
+    <path d="M -8 5 Q -8 -4, 0 -6 Q 8 -4, 8 5" 
+          fill="none" 
+          stroke="#F5F5F5" 
+          stroke-width="2" 
+          stroke-linecap="round"/>
+    <path d="M -5 4 Q -5 -1, 0 -3 Q 5 -1, 5 4" 
+          fill="none" 
+          stroke="#F5F5F5" 
+          stroke-width="2" 
+          stroke-linecap="round"/>
+    <circle cx="0" cy="2" r="1.5" fill="#F5F5F5"/>
+  </g>
+</svg>
